@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: zuul # 서비스명
+  cloud:
+    config:
+      uri: http://localhost:8888/config

@@ -1,0 +1,21 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config # 서비스명
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configuration
+        prefix: /config
+
+eureka:
+  client:
+    registerWithEureka: true # 이 서버를 eureka에 등록할 지 여부
+    fetchRegistry: true # registry에 있는 정보를 가져올 지 여부
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/ # eureka 서버 정보

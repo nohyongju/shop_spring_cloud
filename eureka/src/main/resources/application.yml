@@ -1,0 +1,13 @@
+server:
+  port: 8000 # Spring boot의 포트 정보 설정
+
+spring:
+  application:
+    name: eureka # 서비스명
+
+eureka:
+  client:
+    registerWithEureka: true # 이 서버를 eureka에 등록할 지 여부
+    fetchRegistry: false # registry에 있는 정보를 가져올 지 여부
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/ # eureka 서버 정보
